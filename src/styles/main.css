@@ -1,0 +1,202 @@
+:root {
+  --bg-primary: #F5F0EB;
+  --bg-secondary: #EDE4D8;
+  --accent-jade: #7BA891;
+  --accent-blue: #4A6FA5;
+  --accent-brown: #8B6F47;
+  --accent-copper: #C47E5A;
+  --text-primary: #3D2C1A;
+  --text-secondary: #7A6B5D;
+  --border-color: #D4C5B2;
+  --card-bg: rgba(245, 240, 235, 0.95);
+  --shadow-color: rgba(61, 44, 26, 0.1);
+  --shadow-lg: rgba(61, 44, 26, 0.18);
+  --header-height: 56px;
+  --toolbar-width: 300px;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(139,111,71,0.025) 3px, rgba(139,111,71,0.025) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(139,111,71,0.015) 5px, rgba(139,111,71,0.015) 6px);
+  position: relative;
+}
+
+/* Paper noise overlay via SVG */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.75' numOctaves='4' stitchTiles='stitch' type='fractalNoise'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9998;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Navigation Bar (global, in App.vue) ===== */
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 24px;
+  height: var(--header-height);
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 100;
+}
+
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.main-title {
+  font-family: 'Noto Serif SC', STSong, KaiTi, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.08em;
+}
+
+.sub-title {
+  font-family: 'Noto Serif SC', STSong, KaiTi, serif;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  margin-top: 1px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== Main Content Area ===== */
+.main-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ===== 3D Canvas Area ===== */
+.canvas-area {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  background: transparent;
+}
+
+.canvas-area canvas {
+  display: block;
+}
+
+/* ===== Toolbar (right sidebar) - legacy class for reference ===== */
+.toolbar {
+  width: var(--toolbar-width);
+  flex-shrink: 0;
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-left: 1px solid var(--border-color);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toolbar::-webkit-scrollbar {
+  width: 4px;
+}
+.toolbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.toolbar::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 2px;
+}
+
+/* ===== Group Title (shared) ===== */
+.group-title {
+  font-family: 'Noto Serif SC', STSong, KaiTi, serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed var(--border-color);
+  letter-spacing: 0.04em;
+}
+
+/* ===== Dialog overrides (Element Plus) ===== */
+.el-dialog {
+  border-radius: 12px !important;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.el-dialog__header {
+  font-family: 'Noto Serif SC', STSong, KaiTi, serif;
+  padding: 16px 20px 8px !important;
+}
+
+.el-dialog__body {
+  padding: 12px 20px 20px !important;
+}
+
+/* ===== Input overrides ===== */
+.el-input__wrapper {
+  border-radius: 8px !important;
+  box-shadow: 0 0 0 1px var(--border-color) inset !important;
+}
+
+.el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1px var(--accent-jade) inset !important;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .toolbar {
+    width: 100%;
+    max-height: 45vh;
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+  }
+  .main-content {
+    flex-direction: column;
+  }
+  .canvas-area {
+    flex: none;
+    height: 55vh;
+  }
+}

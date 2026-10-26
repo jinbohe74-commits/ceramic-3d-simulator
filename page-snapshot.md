@@ -1,0 +1,136 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: 陶瓷 3D 模拟工坊
+      - generic [ref=e7]: 匠心造瓷 · 云端赏韵
+    - button "登录" [active] [ref=e9] [cursor=pointer]:
+      - generic [ref=e10]: 登录
+  - complementary [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]: 主题色
+      - generic [ref=e18]:
+        - button "墨青" [ref=e19] [cursor=pointer]:
+          - generic [ref=e21]: 墨青
+        - button "赭石" [ref=e22] [cursor=pointer]:
+          - generic [ref=e24]: 赭石
+        - button "黛蓝" [ref=e25] [cursor=pointer]:
+          - generic [ref=e27]: 黛蓝
+        - button "雅白" [ref=e28] [cursor=pointer]:
+          - generic [ref=e30]: 雅白
+    - generic [ref=e32]:
+      - generic [ref=e33]: 样式纹样
+      - generic [ref=e34]:
+        - button "青花瓷" [ref=e35] [cursor=pointer]
+        - button "粉彩瓷" [ref=e36] [cursor=pointer]
+        - button "钧瓷" [ref=e37] [cursor=pointer]
+        - button "素面白瓷" [ref=e38] [cursor=pointer]
+      - generic [ref=e39]:
+        - generic [ref=e40]: ▸ 内置花纹
+        - generic [ref=e41]:
+          - generic "青花瓷缠枝莲" [ref=e42] [cursor=pointer]:
+            - img "青花瓷缠枝莲" [ref=e43]
+            - generic [ref=e44]: 青花瓷缠枝莲
+          - generic "粉彩牡丹" [ref=e45] [cursor=pointer]:
+            - img "粉彩牡丹" [ref=e46]
+            - generic [ref=e47]: 粉彩牡丹
+          - generic "钧瓷窑变纹" [ref=e48] [cursor=pointer]:
+            - img "钧瓷窑变纹" [ref=e49]
+            - generic [ref=e50]: 钧瓷窑变纹
+          - generic "龙纹" [ref=e51] [cursor=pointer]:
+            - img "龙纹" [ref=e52]
+            - generic [ref=e53]: 龙纹
+          - generic "凤纹" [ref=e54] [cursor=pointer]:
+            - img "凤纹" [ref=e55]
+            - generic [ref=e56]: 凤纹
+          - generic "山水纹" [ref=e57] [cursor=pointer]:
+            - img "山水纹" [ref=e58]
+            - generic [ref=e59]: 山水纹
+          - generic "花鸟纹" [ref=e60] [cursor=pointer]:
+            - img "花鸟纹" [ref=e61]
+            - generic [ref=e62]: 花鸟纹
+          - generic "几何回纹" [ref=e63] [cursor=pointer]:
+            - img "几何回纹" [ref=e64]
+            - generic [ref=e65]: 几何回纹
+          - generic "如意纹" [ref=e66] [cursor=pointer]:
+            - img "如意纹" [ref=e67]
+            - generic [ref=e68]: 如意纹
+          - generic "云纹" [ref=e69] [cursor=pointer]:
+            - img "云纹" [ref=e70]
+            - generic [ref=e71]: 云纹
+      - textbox "输入纹样文字..." [ref=e73]
+      - generic [ref=e74]:
+        - generic [ref=e75]: 纹样可见度
+        - slider [ref=e76]: "0"
+        - generic [ref=e77]: "0.00"
+      - generic [ref=e78]:
+        - generic [ref=e79]: ▸ 自定义图案
+        - generic [ref=e80] [cursor=pointer]: 上传图案（≤10MB）
+      - generic [ref=e140]:
+        - generic [ref=e141]: ▸ 已贴附图案 (2)
+        - button "清除全部" [ref=e143] [cursor=pointer]
+        - generic [ref=e144]:
+          - generic [ref=e145]: 大小
+          - slider [ref=e146]: "0.3"
+          - generic [ref=e147]: "0.30"
+        - generic [ref=e148]:
+          - generic [ref=e149]: 旋转
+          - slider [ref=e150]: "0"
+          - generic [ref=e151]: "0.00"
+        - generic [ref=e152]:
+          - generic [ref=e153]: 透明度
+          - slider [ref=e154]: "1"
+          - generic [ref=e155]: "1.00"
+      - button "🔥 窑变 · 烧制" [ref=e81] [cursor=pointer]
+    - generic [ref=e83]:
+      - generic [ref=e84]: 器型切换
+      - generic [ref=e85]:
+        - button "梅瓶" [ref=e86] [cursor=pointer]
+        - button "玉壶春瓶" [ref=e87] [cursor=pointer]
+        - button "赏瓶" [ref=e88] [cursor=pointer]
+        - button "碗盏" [ref=e89] [cursor=pointer]
+        - button "茶杯" [ref=e90] [cursor=pointer]
+    - generic [ref=e92]:
+      - generic [ref=e93]: 视角预设
+      - generic [ref=e94]:
+        - button "正面" [ref=e95] [cursor=pointer]
+        - button "侧面" [ref=e96] [cursor=pointer]
+        - button "俯视" [ref=e97] [cursor=pointer]
+        - button "仰视" [ref=e98] [cursor=pointer]
+    - generic [ref=e100]:
+      - generic [ref=e101]: 材质精细调节
+      - generic [ref=e102]:
+        - generic [ref=e103]: 金属感
+        - slider [ref=e104]: "0.1"
+        - generic [ref=e105]: "0.10"
+      - generic [ref=e106]:
+        - generic [ref=e107]: 粗糙度
+        - slider [ref=e108]: "0.3"
+        - generic [ref=e109]: "0.30"
+      - generic [ref=e110]:
+        - generic [ref=e111]: 釉面通透度
+        - slider [ref=e112]: "0.95"
+        - generic [ref=e113]: "0.95"
+      - generic [ref=e114]:
+        - generic [ref=e115]: 釉面亮度
+        - slider [ref=e116]: "0.5"
+        - generic [ref=e117]: "0.50"
+    - generic [ref=e119]:
+      - generic [ref=e120]: 特效开关
+      - generic [ref=e121]:
+        - generic [ref=e122]: 环境光影
+        - generic [ref=e123]:
+          - checkbox [checked]
+      - generic [ref=e125]:
+        - generic [ref=e126]: 参考网格
+        - generic [ref=e127]:
+          - checkbox
+      - generic [ref=e129]:
+        - generic [ref=e130]: 自动旋转
+        - generic [ref=e131]:
+          - checkbox
+    - generic [ref=e134]:
+      - generic [ref=e135]: 工具
+      - generic [ref=e136]:
+        - button "重置视角" [ref=e137] [cursor=pointer]
+        - button "全屏展示" [ref=e138] [cursor=pointer]
+        - button "截图导出" [ref=e139] [cursor=pointer]
